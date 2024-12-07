@@ -1,17 +1,21 @@
 // See: www.11ty.dev/docs/config/
 
+const eleventySass = require("eleventy-sass");
+
+
 //
 // Main entry point
 //
 module.exports = async function(eleventyConfig) {
+    eleventyConfig.addPlugin(eleventySass);
+
     return {
         dir: {
             input: "src",
-            includes: "includes",
-      	    layouts: "includes/layouts",
-            components: "includes/components",
+            includes: "layouts/partials",
+      	    layouts: "layouts",
             data: "globals",
-            output: "out",
+            output: "_site",
         },
     };
 };
