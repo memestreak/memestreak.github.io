@@ -1,15 +1,13 @@
-# Dependencies installed by npm
+# NPM installed dependencies
 node_modules
 npm-debug.log*
-package-lock.json
-codekit-config.json
 
-# macOS
-.DS_Store
-
-# build artifacts
+# Eleventy build artifacts
 _site
 
-# secrets and errors
+# Mac cruft
+.DS_Store
+
+# Secrets and errors
 .env
 .log
