@@ -1,5 +1,5 @@
 ---
-title: this is a title from front matter
+title: This is a title from front matter
 layout: base.njk
 ---
 

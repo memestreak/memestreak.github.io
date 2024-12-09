@@ -6,12 +6,17 @@
 # One time.
 npm install
 
-npx @11ty/eleventy
-npx @11ty/eleventy --serve
+npm run build
+npm run serve
 ```
 
 ## References
 
-Built using [Eleventy].
+*   Built using [Eleventy].
+*   Support for scss formatted stylesheets comes from [eleventy-sass].
+*   Hosting on GitHub Pages: See [hosting-eleventy-on-github-pages]
+
 
 [Eleventy]: https://www.11ty.dev/
+[eleventy-sass]: https://github.com/kentaroi/eleventy-sass
+[hosting-eleventy-on-github-pages]: https://quinndombrowski.com/blog/2022/05/07/hosting-eleventy-on-github-pages/
