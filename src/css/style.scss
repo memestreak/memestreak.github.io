@@ -1,0 +1,24 @@
+@charset "utf-8";
+
+em-navbar {
+    display: block;
+    background: orange;
+
+    em-navbar-home-logo {
+        color: blue;
+        display: inline;
+    }
+
+    ul.em-navbar-links {
+        display: inline;
+    }
+
+    .em-navbar-link {
+        display: inline;
+    }
+}
+
+em-footer {
+    display: block;
+    background: pink;
+}

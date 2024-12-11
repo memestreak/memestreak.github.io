@@ -1,0 +1,13 @@
+# NPM installed dependencies
+node_modules
+npm-debug.log*
+
+# Eleventy build artifacts
+_site
+
+# Mac cruft
+.DS_Store
+
+# Secrets and errors
+.env
+.log

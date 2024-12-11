@@ -1,0 +1,18 @@
+{
+  "name": "memestreak.github.io",
+  "version": "1.0.0",
+  "main": "eleventy.config.js",
+  "scripts": {
+    "serve": "PROD=0 NODE_OPTIONS=\"--experimental-require-module\" eleventy --serve",
+    "build": "PROD=1 NODE_OPTIONS=\"--experimental-require-module\" eleventy",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": ["eminor.net", "site", "eleventy", "11ty"],
+  "author": "",
+  "license": "ISC",
+  "description": "Site source for eminor.net",
+  "dependencies": {
+    "@11ty/eleventy": "^3.0.0",
+    "eleventy-sass": "^3.0.0-beta.0"
+  }
+}
