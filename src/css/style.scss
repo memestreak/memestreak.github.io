@@ -1,24 +1,83 @@
 @charset "utf-8";
 
-em-navbar {
-    display: block;
+$base-color-light-dark: #444444;
+$base-color-very-dark: #000000;
+$text-color: #ffffff;
+
+// Debugging
+// * { outline: 1px dashed red ;}
+
+:root {
+    background: $base-color-light-dark;
+}
+
+.container {
+    display: inline-flex;
+    gap: 10%;
+}
+a {
+    display: inline;
+    flex: 1;
+    text-decoration: none;
+    outline-color: transparent;
+    text-align: center;
+    line-height: 2;
+    color: black;
+}
+
+a:link,
+a:visited,
+a:focus {
+    background: palegoldenrod;
+    color: black;
+}
+
+a:hover {
     background: orange;
+}
+
+a:active {
+    background: darkred;
+    color: white;
+}
+
+em-navbar {
+    border-radius: 25px;
+    display: block;
+    background: $base-color-very-dark;
 
     em-navbar-home-logo {
-        color: blue;
+        color: white;
         display: inline;
     }
 
-    ul.em-navbar-links {
+    // See "styling links as buttons" at..
+    // https://developer.mozilla.org/en-US/docs/Learn/CSS/Styling_text/Styling_links
+    ul.em-navbar-link-list {
         display: inline;
-    }
 
-    .em-navbar-link {
-        display: inline;
+        li {
+            display: inline;
+
+            a {
+                text-decoration: none;
+                color: $text-color;
+            }
+            a:hover {
+                background: $base-color-light-dark;
+            }
+        }
     }
 }
 
 em-footer {
+    border-radius: 25px;
     display: block;
     background: pink;
+}
+
+.em-rcorners {
+  border-radius: 25px;
+  background: #73AD21;
+  padding: 20px; 
 }

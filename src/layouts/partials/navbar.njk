@@ -2,12 +2,10 @@
 
   <em-navbar-home-logo>I'm the navbar home logo.</em-navbar-home-logo>
 
-  <ul class="em-navbar-links">
+  <nav class="container">
     {%- for link in navigation.main -%}
-    <li class="em-navbar-link">
       <a href="{{ link.url }}"{% if link.description %} title="{{ link.description }}"{% endif %}>{{ link.title }}</a>
-    </li>
     {%- endfor -%}
-  </ul>
+  </nav>
 
 </em-navbar>
