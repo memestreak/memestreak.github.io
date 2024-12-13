@@ -1,5 +1,6 @@
 ---
 title: This is a title from front matter
+navigation_id: asdf
 layout: base.njk
 ---
 

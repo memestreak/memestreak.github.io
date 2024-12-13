@@ -8,6 +8,14 @@ const eleventySass = require("eleventy-sass");
 //
 module.exports = async function(eleventyConfig) {
     eleventyConfig.addPlugin(eleventySass);
+    eleventyConfig.addPassthroughCopy("src/assets/js");
+
+    // Debugging helper.
+    // This enables things like the following in your nunjuck templates:
+    //   {{ article | log }}
+    eleventyConfig.addFilter('log', value => {
+        console.log(value)
+    })
 
     return {
         dir: {

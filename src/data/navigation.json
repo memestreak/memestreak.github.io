@@ -1,12 +1,14 @@
 {
   "main": [
     {
+      "id": "about",
       "title": "About",
-      "url": "/about/"
+      "url": "/about"
     },
     {
+      "id": "projects",
       "title": "Projects",
-      "url": "/projects/"
+      "url": "/projects"
     }
   ]
 }

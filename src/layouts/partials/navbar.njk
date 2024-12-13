@@ -1,11 +1,16 @@
 <em-navbar>
-
   <em-navbar-home-logo>I'm the navbar home logo.</em-navbar-home-logo>
+  <nav class="navbar-link-container">
 
-  <nav class="container">
-    {%- for link in navigation.main -%}
-      <a href="{{ link.url }}"{% if link.description %} title="{{ link.description }}"{% endif %}>{{ link.title }}</a>
-    {%- endfor -%}
+  {% for link in navigation.main -%}
+     {% set active_nav_bar_link = "" %}
+     {% if navigation_id == link.id  %}
+       {% set active_nav_bar_link = " active" %}
+     {% endif %}
+     <a href="{{ link.url }}"
+     {% if link.description %} title="{{ link.description }}" {% endif %}
+      class="navbar-link{{active_nav_bar_link}}">{{ link.title }}</a>
+  {% endfor -%}
   </nav>
-
 </em-navbar>
+
