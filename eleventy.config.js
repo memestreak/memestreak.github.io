@@ -9,6 +9,7 @@ const eleventySass = require("eleventy-sass");
 module.exports = async function(eleventyConfig) {
     eleventyConfig.addPlugin(eleventySass);
     eleventyConfig.addPassthroughCopy("src/assets/js");
+    eleventyConfig.addPassthroughCopy("src/assets/img");
 
     // Debugging helper.
     // This enables things like the following in your nunjuck templates:

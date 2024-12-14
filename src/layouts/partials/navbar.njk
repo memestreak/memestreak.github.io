@@ -1,16 +1,14 @@
 <em-navbar>
-  <em-navbar-home-logo>I'm the navbar home logo.</em-navbar-home-logo>
+  <em-navbar-home-logo>
+  <!-- <img src="/assets/img/eminor-logo-400x400.png" alt="Eminor.net logo" width="70" height="70"> -->
+  <img src="/assets/img/eminor-logo.svg" alt="Eminor.net logo" class="svg-logo" width="70" height="70"></em-navbar-home-logo>
   <nav class="navbar-link-container">
-
-  {% for link in navigation.main -%}
-     {% set active_nav_bar_link = "" %}
-     {% if navigation_id == link.id  %}
+  {%- for link in navigation.main -%}
+     {% set active_nav_bar_link = "" -%}
+     {% if navigation_id == link.id  -%}
        {% set active_nav_bar_link = " active" %}
      {% endif %}
-     <a href="{{ link.url }}"
-     {% if link.description %} title="{{ link.description }}" {% endif %}
-      class="navbar-link{{active_nav_bar_link}}">{{ link.title }}</a>
-  {% endfor -%}
+     <a href="{{ link.url }}"{% if link.description %} title="{{ link.description }}" {% endif %} class="navbar-link{{active_nav_bar_link}}">{{ link.title }}</a>
+  {%- endfor -%}
   </nav>
 </em-navbar>
-

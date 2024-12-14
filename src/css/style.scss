@@ -1,61 +1,74 @@
 @charset "utf-8";
 
-$base-color-light-dark: #444444;
-$base-color-very-dark: #000000;
+@use 'sass:color';
+
+@import "http://fonts.googleapis.com/css?family=Droid+Sans";
+@import "http://fonts.googleapis.com/css?family=Open+Sans";
+
+$base-color-very-dark: lightgrey;
 $text-color: #ffffff;
+$color-green: #73AD21;
+
+$border-radius: 25px;
 
 // Debugging
 // * { outline: 1px dashed red ;}
 
 :root {
-    background: $base-color-light-dark;
+    background: #222222;
+}
+
+body {
+    margin: 3%;
+    font-family: 'Open Sans', erif;
+}
+
+.svg-logo {
+    fill: white;
 }
 
 .navbar-link-container {
+    // float: right;
     display: inline-flex;
     gap: 10%;
-    line-height: 2;
+  margin-left: 80%;
 }
 
 .navbar-link {
+    border-radius: 8px;
     display: inline;
-    flex: 1;
     text-decoration: none;
     outline-color: transparent;
     text-align: center;
-    line-height: 2;
+    line-height: 2em;
     color: black;
-
+    &.active {
+        background-color: $color-green;
+    }
 }
-.navbar-link.active {
-  background-color: white;
-  border-bottom:3.5px solid blue;
-}
-
 
 a:link,
 a:visited,
 a:focus {
-    background: palegoldenrod;
+    // background-color: color.adjust($color-green, $lightness: 1% );
     color: black;
 }
 
 a:hover {
-    background: orange;
+    background-color: color.adjust($color-green, $lightness: 20% );
 }
 
 a:active {
-    background: darkred;
-    color: white;
+    color: white;  // Text color
 }
 
 em-navbar {
-    border-radius: 25px;
+    border-radius: $border-radius;
     display: block;
-    background: $base-color-very-dark;
+    background: olive;
 
     em-navbar-home-logo {
-        color: white;
+        // color: white;
         display: inline;
     }
 
@@ -67,10 +80,9 @@ em-navbar {
             display: inline;
             a {
                 text-decoration: none;
-                color: $text-color;
+                // color: $text-color;
             }
             a:hover {
-                background: $base-color-light-dark;
             }
         }
     }
@@ -84,6 +96,6 @@ em-footer {
 
 .em-rcorners {
   border-radius: 25px;
-  background: #73AD21;
+  background: $color-green;
   padding: 20px; 
 }
