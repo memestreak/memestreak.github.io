@@ -5,58 +5,77 @@
 @import "http://fonts.googleapis.com/css?family=Droid+Sans";
 @import "http://fonts.googleapis.com/css?family=Open+Sans";
 
-$base-color-very-dark: lightgrey;
-$text-color: #ffffff;
 $color-green: #73AD21;
 
-$border-radius: 25px;
+$border-radius: 5px;
 
 // Debugging
 // * { outline: 1px dashed red ;}
 
 :root {
-    background: #222222;
+    background: $color-green;
 }
 
 body {
-    margin: 3%;
-    font-family: 'Open Sans', erif;
+    font-family: 'Open Sans', serif;
 }
+
+main {
+    max-width: 750px;
+    margin: 0 auto;
+    padding: 42px 5%
+}
+
+// .c-article-section__title {
+//     color: black;
+// }
 
 .svg-logo {
-    fill: white;
+    filter: invert(100%);
+    margin-left: 8%;
+    padding: 5%;
 }
 
+// Put the nav bar links on the right, but not too far.
 .navbar-link-container {
-    // float: right;
-    display: inline-flex;
-    gap: 10%;
-  margin-left: 80%;
+    margin-left: auto;
+    margin-right: 5%;
+    align-self: end;  // Places element at end of verical cross-axis.
 }
 
 .navbar-link {
-    border-radius: 8px;
-    display: inline;
+    display: inline-block;
+    //border-radius: 8px;
+    border-radius: 8px 8px 0px 0px; 
     text-decoration: none;
-    outline-color: transparent;
-    text-align: center;
     line-height: 2em;
-    color: black;
+    color: white;
+    min-width: 5em;
+    text-align: center;
+        
     &.active {
         background-color: $color-green;
     }
+
+    // Why doesn't this work?
+    a:hover {
+        // text-decoration: underline;
+        text-decoration: none;
+        background-color: color.adjust($color-green, $lightness: 20% );
+    }
 }
 
-a:link,
-a:visited,
-a:focus {
-    // background-color: color.adjust($color-green, $lightness: 1% );
-    color: black;
+hr.footnotes-sep {
+    border-color: black;
 }
 
-a:hover {
-    background-color: color.adjust($color-green, $lightness: 20% );
-}
+
+// // Why is this required?
+// a:hover {
+//     // text-decoration: underline;
+//     text-decoration: none;
+//     background-color: color.adjust($color-green, $lightness: 20% );
+// }
 
 a:active {
     color: white;  // Text color
@@ -64,11 +83,10 @@ a:active {
 
 em-navbar {
     border-radius: $border-radius;
-    display: block;
-    background: olive;
+    display: flex;
+    background: black;
 
     em-navbar-home-logo {
-        // color: white;
         display: inline;
     }
 
@@ -80,7 +98,6 @@ em-navbar {
             display: inline;
             a {
                 text-decoration: none;
-                // color: $text-color;
             }
             a:hover {
             }
@@ -89,13 +106,13 @@ em-navbar {
 }
 
 em-footer {
-    border-radius: 25px;
+    border-radius: 5px;
     display: block;
     background: pink;
 }
 
 .em-rcorners {
-  border-radius: 25px;
+  border-radius: 5px;
   background: $color-green;
-  padding: 20px; 
+  padding: 10px; 
 }
