@@ -1,15 +1,31 @@
 <em-navbar>
-  <em-navbar-home-logo>
-  <a href="/">
-  <img src="/assets/img/eminor-logo.svg" alt="Eminor.net logo" class="svg-logo" width="70" height="70"></em-navbar-home-logo>
-  </>
+  <em-home-link>
+    <a href="/">
+      <em-navbar-home-logo>
+        <img src="/assets/img/eminor-logo.svg"
+             alt="Eminor.net logo" class="svg-logo"
+             width="70" height="70" />
+      </em-navbar-home-logo>
+      <em-navbar-home-text>
+        eminor.net
+      </em-navbar-home-text>
+    </a>
+  </em-home-link>
+
+  <!-- TODO: make this a dropdown. See: -->
+  <!-- https://www.w3schools.com/howto/howto_css_dropdown.asp -->
   <nav class="navbar-link-container">
   {%- for link in navigation.main -%}
      {% set active_nav_bar_link = "" -%}
      {% if navigation_id == link.id  -%}
-       {% set active_nav_bar_link = " active" %}
+       {% set active_nav_bar_link = "active" %}
      {% endif %}
-     <a href="{{ link.url }}"{% if link.description %} title="{{ link.description }}" {% endif %} class="navbar-link{{active_nav_bar_link}}">{{ link.title }}</a>
+     <em-navbar-link class="{{active_nav_bar_link}}">
+       <a href="{{ link.url }}"{% if link.description %}
+          title="{{ link.description }}" {% endif %}
+          class="{{active_nav_bar_link}}">{{ link.title }}
+       </a>
+     </em-navbar-link>
   {%- endfor -%}
   </nav>
 </em-navbar>

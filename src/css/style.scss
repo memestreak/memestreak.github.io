@@ -2,18 +2,18 @@
 
 @use 'sass:color';
 
-@import "http://fonts.googleapis.com/css?family=Droid+Sans";
 @import "http://fonts.googleapis.com/css?family=Open+Sans";
+@import "http://fonts.googleapis.com/css?family=Agu+Display";
 
 $color-green: #73AD21;
-
-$border-radius: 5px;
+$page-main-color: $color-green;
+$border-radius: 8px;  // For consistent rounded corners.
 
 // Debugging
 // * { outline: 1px dashed red ;}
 
 :root {
-    background: $color-green;
+    background: $page-main-color;
 }
 
 body {
@@ -21,47 +21,84 @@ body {
 }
 
 main {
-    max-width: 750px;
+    // Keep contents in centered for readability.
+    // The optimal line length for body text is 50–75 characters.
+    max-width: 50em;
     margin: 0 auto;
-    padding: 42px 5%
 }
 
-// .c-article-section__title {
-//     color: black;
-// }
+//
+// The top-level, persistent navigation bar with logo, etc.
+//
+em-navbar {
+    border-radius: $border-radius;
+    display: flex;
+    background: black;
 
-.svg-logo {
-    filter: invert(100%);
-    margin-left: 8%;
-    padding: 5%;
-}
+    em-home-link {
+        padding: 0.2em;
+        a {
+            text-decoration: none;
+        }
 
-// Put the nav bar links on the right, but not too far.
-.navbar-link-container {
-    margin-left: auto;
-    margin-right: 5%;
-    align-self: end;  // Places element at end of verical cross-axis.
-}
+        em-navbar-home-logo {
+            display: inline;
+            img.svg-logo {
+                display: inline-block;
+                filter: invert(100%);
+                padding-top: 0.5%;
+            }
 
-.navbar-link {
-    display: inline-block;
-    //border-radius: 8px;
-    border-radius: 8px 8px 0px 0px; 
-    text-decoration: none;
-    line-height: 2em;
-    color: white;
-    min-width: 5em;
-    text-align: center;
-        
-    &.active {
-        background-color: $color-green;
+        }
+
+        // eminor.net text
+        em-navbar-home-text {
+            vertical-align: top;
+            display: inline;
+            color: white;
+            font-size: 3em;
+            font-family: 'Agu Display', serif;
+            position: relative;
+            bottom: 5px;
+        }
     }
 
-    // Why doesn't this work?
-    a:hover {
-        // text-decoration: underline;
+    // Put the nav bar links on the right, but not too far.
+    .navbar-link-container {
+        margin-left: auto;
+        margin-right: 5%;
+        align-self: end;  // Places element at end of vertical cross-axis.
+    }
+}
+
+// See "styling links as buttons" at..
+// https://developer.mozilla.org/en-US/docs/Learn/CSS/Styling_text/Styling_links
+ul.em-navbar-link-list {
+    display: inline;
+}
+
+
+em-navbar-link {
+    display: inline-block;
+    border-radius: $border-radius $border-radius 0px 0px;
+    text-decoration: none;
+    line-height: 2em;
+    min-width: 5em;
+    text-align: center;
+
+    &.active {
+        // Make the current tab blend in with the main body.
+        background-color: $page-main-color;
+    }
+
+    a {
         text-decoration: none;
-        background-color: color.adjust($color-green, $lightness: 20% );
+        color: white;
+        &.active {
+            color: black;
+        }
+        &:hover {
+        }
     }
 }
 
@@ -69,50 +106,14 @@ hr.footnotes-sep {
     border-color: black;
 }
 
-
-// // Why is this required?
-// a:hover {
-//     // text-decoration: underline;
-//     text-decoration: none;
-//     background-color: color.adjust($color-green, $lightness: 20% );
-// }
-
-a:active {
-    color: white;  // Text color
-}
-
-em-navbar {
-    border-radius: $border-radius;
-    display: flex;
-    background: black;
-
-    em-navbar-home-logo {
-        display: inline;
-    }
-
-    // See "styling links as buttons" at..
-    // https://developer.mozilla.org/en-US/docs/Learn/CSS/Styling_text/Styling_links
-    ul.em-navbar-link-list {
-        display: inline;
-        li {
-            display: inline;
-            a {
-                text-decoration: none;
-            }
-            a:hover {
-            }
-        }
-    }
-}
-
 em-footer {
     border-radius: 5px;
     display: block;
-    background: pink;
+    background: darkgrey;
+    p {
+        display: inline;
+        padding: 0.2%;
+        margin: 2%;
+    }
 }
 
-.em-rcorners {
-  border-radius: 5px;
-  background: $color-green;
-  padding: 10px; 
-}
