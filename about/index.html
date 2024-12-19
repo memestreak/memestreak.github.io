@@ -12,21 +12,43 @@
 </head>
 <body>
 <em-navbar>
-  <em-navbar-home-logo>
-  <a href="/">
-  <img src="/assets/img/eminor-logo.svg" alt="Eminor.net logo" class="svg-logo" width="70" height="70"></em-navbar-home-logo>
-  </>
+  <em-home-link>
+    <a href="/">
+      <em-navbar-home-logo>
+        <img src="/assets/img/eminor-logo.svg"
+             alt="Eminor.net logo" class="svg-logo"
+             width="70" height="70" />
+      </em-navbar-home-logo>
+      <em-navbar-home-text>
+        eminor.net
+      </em-navbar-home-text>
+    </a>
+  </em-home-link>
+
+  <!-- TODO: make this a dropdown. See: -->
+  <!-- https://www.w3schools.com/howto/howto_css_dropdown.asp -->
   <nav class="navbar-link-container">
      
-     <a href="/about" class="navbar-link active">About</a>
-     <a href="/projects" class="navbar-link">Projects</a></nav>
+     <em-navbar-link class="active">
+       <a href="/about"
+          class="active">About
+       </a>
+     </em-navbar-link>
+     <em-navbar-link class="">
+       <a href="/projects"
+          class="">Projects
+       </a>
+     </em-navbar-link></nav>
 </em-navbar>
 
-<main class="em-rcorners">
+<main>
 <h1>About</h1>
 <p>About stuff</p>
 
 </main>
-<em-footer>This is footer content.</em-footer>
+<em-footer>
+  <p>© 2024 Jeremy Ellington</p>
+  <a href="https://github.com/memestreak">github</a>
+</em-footer>
 </body>
 </html>
