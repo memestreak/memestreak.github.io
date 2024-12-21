@@ -77,7 +77,6 @@ ul.em-navbar-link-list {
     display: inline;
 }
 
-
 em-navbar-link {
     display: inline-block;
     border-radius: $border-radius $border-radius 0px 0px;
@@ -106,14 +105,23 @@ hr.footnotes-sep {
     border-color: black;
 }
 
+// ----------------------------------------------------------------------------
+// Footer
+// ----------------------------------------------------------------------------
 em-footer {
     border-radius: 5px;
-    display: block;
+    display: flex;
     background: darkgrey;
-    p {
-        display: inline;
-        padding: 0.2%;
-        margin: 2%;
+    em-copyright {
+        padding-left: 1%;
+    }
+    a {
+        display: inline-block;
+        &.github-logo {
+            text-decoration: none;
+            margin-right: 3%;
+            margin-left: auto;
+        }
     }
 }
 

@@ -7,9 +7,9 @@ const markdownItAttrs = require('markdown-it-attrs')
 const markdownItFootnote = require('markdown-it-footnote')
 const syntaxHighlight = require("@11ty/eleventy-plugin-syntaxhighlight");
 
-//
+// ----------------------------------------------------------------------------
 // Main entry point
-//
+// ----------------------------------------------------------------------------
 module.exports = async function(eleventyConfig) {
     eleventyConfig.addPlugin(eleventySass);
     eleventyConfig.addPassthroughCopy("src/assets/js");
