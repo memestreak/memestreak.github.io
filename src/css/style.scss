@@ -116,9 +116,11 @@ em-footer {
         padding-left: 1%;
     }
     a {
-        display: inline-block;
+        display: flex;
         &.github-logo {
             text-decoration: none;
+            padding-top: 0.3%;
+            padding-bottom: 0.3%;
             margin-right: 3%;
             margin-left: auto;
         }
