@@ -9,7 +9,7 @@ $color-green: #73AD21;
 $page-main-color: $color-green;
 $border-radius: 8px;  // For consistent rounded corners.
 
-// Debugging
+// For debugging:
 // * { outline: 1px dashed red ;}
 
 :root {
@@ -114,6 +114,7 @@ em-footer {
     background: darkgrey;
     em-copyright {
         padding-left: 1%;
+        padding-top: 0.15%;
     }
     a {
         display: flex;

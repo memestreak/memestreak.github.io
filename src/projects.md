@@ -6,4 +6,4 @@ layout: base.njk
 
 # Projects
 
-Project stuff
+Embarrassingly sparse until I catalog some content.
