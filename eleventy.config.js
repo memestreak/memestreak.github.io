@@ -14,6 +14,7 @@ module.exports = async function(eleventyConfig) {
     eleventyConfig.addPlugin(eleventySass);
     eleventyConfig.addPassthroughCopy("src/assets/js");
     eleventyConfig.addPassthroughCopy("src/assets/img");
+    eleventyConfig.addPassthroughCopy("src/CNAME");
 
     eleventyConfig.addPlugin(syntaxHighlight);
 
