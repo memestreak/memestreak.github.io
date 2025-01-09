@@ -1,5 +1,5 @@
 ---
-title: This is a title from front matter
+title: eminor.net
 layout: base.njk
 ---
 
