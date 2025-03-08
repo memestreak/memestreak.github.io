@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang='en'>
 <head>
-<title>eminor.net</title>
+<title>Colophon</title>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link rel="stylesheet" href="/css/style.css">
@@ -42,13 +42,27 @@
 </em-navbar>
 
 <main>
-<h1>Hello</h1>
-<p>Right now, this is my playground for site development experimentation.<br>
-The content on this page is written in markdown and transpiled by<br>
-<a href="https://www.11ty.dev/">Eleventy</a> into HTML.</p>
-<p>Even code formatting is supported.</p>
-<pre class="language-sh"><code class="language-sh"><span class="token comment"># wow a shell comment</span>
-<span class="token builtin class-name">echo</span> <span class="token string">"Neat"</span></code></pre>
+<h1>Colophon</h1>
+<h2>Eleventy</h2>
+<p>This site is built using <a href="https://www.11ty.dev/">Eleventy</a>, a static site generator. The idea<br>
+is that, for non-trivial sites, things like templating and other types<br>
+of file preprocessing become worth the cost of framework's complexity.</p>
+<h2>GitHub Pages</h2>
+<p>We use <a href="https://pages.github.com/">GitHub Pages</a> to host the site (<a href="https://github.com/memestreak/memestreak.github.io">source</a>). It's currently free<br>
+for public repositories.</p>
+<p>GitHub Pages assumes the use of Jekyll<sup class="footnote-ref"><a href="#fn1" id="fnref1">[1]</a></sup>, and configuring it to use<br>
+Eleventy requires a few non-obvious configuration changes. <a href="https://quinndombrowski.com/blog/2022/05/07/hosting-eleventy-on-github-pages/">This<br>
+article</a> helped me get up and running.</p>
+<p>The last bit of complexity comes from using a custom domain name for<br>
+the site. By default a user's GitHub Pages repository will be hosted<br>
+at <code>$USER.github.io/</code>, but this is <a href="https://docs.github.com/en/pages/configuring-a-custom-domain-for-your-github-pages-site/managing-a-custom-domain-for-your-github-pages-site">customizable</a>.</p>
+<hr class="footnotes-sep">
+<section class="footnotes">
+<ol class="footnotes-list">
+<li id="fn1" class="footnote-item"><p><a href="https://jekyllrb.com/">Jekyll</a> is an alternative static site generator based on Ruby. <a href="#fnref1" class="footnote-backref">↩︎</a></p>
+</li>
+</ol>
+</section>
 
 </main>
 <em-footer>
