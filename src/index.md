@@ -12,7 +12,7 @@ The content on this page is written in markdown and transpiled by
 Even code formatting is supported.
 
 ```sh
-# wow a shell comment
+# Wow, a shell comment.
 echo "Neat"
 ```
 
