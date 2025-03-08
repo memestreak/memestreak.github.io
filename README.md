@@ -27,7 +27,7 @@ npm build
 ## References
 
 *   Built using [Eleventy].
-*   Support for scss formatted stylesheets comes from [eleventy-sass].
+*   Support for SCSS formatted stylesheets comes from [eleventy-sass].
 *   Hosting on GitHub Pages: See [hosting-eleventy-on-github-pages]
 *   [Configuring GitHub apex domains]
 
