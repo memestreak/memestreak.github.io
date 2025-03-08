@@ -4,7 +4,6 @@
 
 ### Checkout / Install
 
-
 One time step for bootstrapping
 
 ```sh
@@ -22,7 +21,7 @@ npm install
 npm run serve
 
 # Just build _site/ artifacts
-npm run serve
+npm build
 ```
 
 ## References
