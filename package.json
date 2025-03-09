@@ -1,10 +1,10 @@
 {
   "name": "memestreak.github.io",
   "version": "1.0.0",
-  "main": "eleventy.config.js",
+  "main": "src/eleventy.config.js",
   "scripts": {
-    "serve": "PROD=0 NODE_OPTIONS=\"--experimental-require-module\" eleventy --serve",
-    "build": "PROD=1 NODE_OPTIONS=\"--experimental-require-module\" eleventy",
+    "serve": "PROD=0 NODE_OPTIONS=\"--experimental-require-module\" eleventy --config=src/eleventy.config.js --serve",
+    "build": "PROD=1 NODE_OPTIONS=\"--experimental-require-module\" eleventy --config=src/eleventy.config.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [
