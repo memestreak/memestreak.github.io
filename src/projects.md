@@ -6,4 +6,8 @@ layout: base.njk
 
 # Projects
 
-Embarrassingly sparse until I catalog some content.
+<ul>
+  {% for post in collections['projects'] %}
+  <li><a href="{{ post.url }}">{{ post.data.title }}</a></li>
+  {% endfor %}
+</ul>

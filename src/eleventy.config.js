@@ -63,5 +63,8 @@ module.exports = async function(eleventyConfig) {
             // templates will be written to.
             output: "_site",
         },
+        templateFormats: ["njk", "md"],
+        htmlTemplateEngine: "njk",
+        markdownTemplateEngine: "njk",
     };
 };
