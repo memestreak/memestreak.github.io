@@ -1,1 +1,96 @@
-@import"https://fonts.googleapis.com/css?family=Open+Sans";@import"https://fonts.googleapis.com/css?family=Agu+Display";:root{background:#73ad21}body{font-family:"Open Sans",serif}main{max-width:50em;margin:0 auto}em-navbar{border-radius:8px;display:flex;background:#000}em-navbar em-home-link{padding:.2em}em-navbar em-home-link a{text-decoration:none}em-navbar em-home-link em-navbar-home-logo{display:inline}em-navbar em-home-link em-navbar-home-logo img.svg-logo{display:inline-block;filter:invert(100%);padding-top:.5%}em-navbar em-home-link em-navbar-home-text{vertical-align:top;display:inline;color:#fff;font-size:3em;font-family:"Agu Display",serif;position:relative;bottom:5px}em-navbar .navbar-link-container{margin-left:auto;margin-right:5%;align-self:end}ul.em-navbar-link-list{display:inline}em-navbar-link{display:inline-block;border-radius:8px 8px 0px 0px;text-decoration:none;line-height:2em;min-width:5em;text-align:center}em-navbar-link.active{background-color:#73ad21}em-navbar-link a{text-decoration:none;color:#fff}em-navbar-link a.active{color:#000}hr.footnotes-sep{border-color:#000}em-footer{border-radius:5px;display:flex;background:#a9a9a9}em-footer em-copyright{padding-left:1%;padding-top:.15%}em-footer a{display:flex}em-footer a.github-logo{text-decoration:none;padding-top:.3%;padding-bottom:.3%;margin-right:3%;margin-left:auto}
+@import "https://fonts.googleapis.com/css?family=Open+Sans";
+@import "https://fonts.googleapis.com/css?family=Agu+Display";
+:root {
+  background: #73AD21;
+}
+
+body {
+  font-family: "Open Sans", serif;
+}
+
+main {
+  max-width: 50em;
+  margin: 0 auto;
+}
+
+em-navbar {
+  border-radius: 8px;
+  display: flex;
+  background: black;
+}
+em-navbar em-home-link {
+  padding: 0.2em;
+}
+em-navbar em-home-link a {
+  text-decoration: none;
+}
+em-navbar em-home-link em-navbar-home-logo {
+  display: inline;
+}
+em-navbar em-home-link em-navbar-home-logo img.svg-logo {
+  display: inline-block;
+  filter: invert(100%);
+  padding-top: 0.5%;
+}
+em-navbar em-home-link em-navbar-home-text {
+  vertical-align: top;
+  display: inline;
+  color: white;
+  font-size: 3em;
+  font-family: "Agu Display", serif;
+  position: relative;
+  bottom: 5px;
+}
+em-navbar .navbar-link-container {
+  margin-left: auto;
+  margin-right: 5%;
+  align-self: end;
+}
+
+ul.em-navbar-link-list {
+  display: inline;
+}
+
+em-navbar-link {
+  display: inline-block;
+  border-radius: 8px 8px 0px 0px;
+  text-decoration: none;
+  line-height: 2em;
+  min-width: 5em;
+  text-align: center;
+}
+em-navbar-link.active {
+  background-color: #73AD21;
+}
+em-navbar-link a {
+  text-decoration: none;
+  color: white;
+}
+em-navbar-link a.active {
+  color: black;
+}
+hr.footnotes-sep {
+  border-color: black;
+}
+
+em-footer {
+  border-radius: 5px;
+  display: flex;
+  background: darkgrey;
+}
+em-footer em-copyright {
+  padding-left: 1%;
+  padding-top: 0.15%;
+}
+em-footer a {
+  display: flex;
+}
+em-footer a.github-logo {
+  text-decoration: none;
+  padding-top: 0.3%;
+  padding-bottom: 0.3%;
+  margin-right: 3%;
+  margin-left: auto;
+}
+
+/*# sourceMappingURL=style.css.map */
