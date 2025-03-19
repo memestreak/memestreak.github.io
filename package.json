@@ -3,9 +3,12 @@
   "version": "1.0.0",
   "main": "src/eleventy.config.js",
   "scripts": {
-    "serve": "PROD=0 NODE_OPTIONS=\"--experimental-require-module\" eleventy --config=src/eleventy.config.js --serve",
-    "build": "PROD=1 NODE_OPTIONS=\"--experimental-require-module\" eleventy --config=src/eleventy.config.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build:sass": "sass src/style:_site/style",
+    "build:eleventy": "eleventy --config=src/eleventy.config.js",
+    "watch:sass": "sass --watch src/style:_site/style",
+    "watch:eleventy": "eleventy --serve --config=src/eleventy.config.js",
+    "start": "npm-run-all build:sass --parallel watch:*",
+    "build": "npm-run-all build:*"
   },
   "keywords": [
     "eminor.net",
@@ -19,7 +22,8 @@
   "dependencies": {
     "@11ty/eleventy": "^3.0.0",
     "@11ty/eleventy-plugin-syntaxhighlight": "^5.0.0",
-    "eleventy-sass": "^3.0.0-beta.0"
+    "npm-run-all": "^4.1.5",
+    "sass": "^1.86.0"
   },
   "devDependencies": {
     "markdown-it-anchor": "^9.2.0",
