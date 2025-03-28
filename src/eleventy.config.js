@@ -1,7 +1,6 @@
 // See: www.11ty.dev/docs/config/
 
 // See: github.com/kentaroi/eleventy-sass
-const eleventySass = require("eleventy-sass");
 const markdownIt = require('markdown-it')
 const markdownItAttrs = require('markdown-it-attrs')
 const markdownItFootnote = require('markdown-it-footnote')
@@ -11,7 +10,6 @@ const syntaxHighlight = require("@11ty/eleventy-plugin-syntaxhighlight");
 // Main entry point
 // ----------------------------------------------------------------------------
 module.exports = async function(eleventyConfig) {
-    eleventyConfig.addPlugin(eleventySass);
     eleventyConfig.addPassthroughCopy("src/assets/js");
     eleventyConfig.addPassthroughCopy("src/assets/img");
     eleventyConfig.addPassthroughCopy("src/CNAME");
@@ -34,6 +32,10 @@ module.exports = async function(eleventyConfig) {
           .use(markdownItAttrs)
           .use(markdownItFootnote);
     eleventyConfig.setLibrary('md', markdownLib)
+
+    eleventyConfig.setBrowserSyncConfig({
+      files: './_site/style/**/*.css'
+	});
 
     return {
         dir: {
@@ -63,5 +65,8 @@ module.exports = async function(eleventyConfig) {
             // templates will be written to.
             output: "_site",
         },
+        templateFormats: ["njk", "md"],
+        htmlTemplateEngine: "njk",
+        markdownTemplateEngine: "njk",
     };
 };

@@ -6,4 +6,10 @@ layout: base.njk
 
 # Projects
 
-Embarrassingly sparse until I catalog some content.
+{% for post in collections['projects'] %}
+
+<img width=200 alt="oscillator app screenshot" src="{{post.data.blurb.image}}" />
+
+<a href="{{ post.url }}">{{ post.data.title }}</a> : {{ post.data.blurb.summary }}
+
+{% endfor %}

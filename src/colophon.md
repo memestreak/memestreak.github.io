@@ -1,6 +1,6 @@
 ---
 title: Colophon
-navigation_id: colophon
+navigation_id: about
 layout: base.njk
 ---
 

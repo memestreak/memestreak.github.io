@@ -12,4 +12,4 @@ I do software, hardware, music, and other buildy-makey things.
 
 ## This Site
 
-[Here](/colophon)
+[About this site](/colophon)
