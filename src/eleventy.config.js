@@ -1,6 +1,5 @@
 // See: www.11ty.dev/docs/config/
 
-// See: github.com/kentaroi/eleventy-sass
 const markdownIt = require('markdown-it')
 const markdownItAttrs = require('markdown-it-attrs')
 const markdownItFootnote = require('markdown-it-footnote')
@@ -10,6 +9,7 @@ const syntaxHighlight = require("@11ty/eleventy-plugin-syntaxhighlight");
 // Main entry point
 // ----------------------------------------------------------------------------
 module.exports = async function(eleventyConfig) {
+    eleventyConfig.addPassthroughCopy("src/style");
     eleventyConfig.addPassthroughCopy("src/assets/js");
     eleventyConfig.addPassthroughCopy("src/assets/img");
     eleventyConfig.addPassthroughCopy("src/CNAME");

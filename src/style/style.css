@@ -1,0 +1,118 @@
+@import "https://fonts.googleapis.com/css?family=Open+Sans";
+@import "https://fonts.googleapis.com/css?family=Agu+Display";
+
+:root {
+  background: #73AD21;
+}
+
+/* For debugging: */
+/* * { outline: 1px dashed red ;} */
+
+body {
+  font-family: "Open Sans", serif;
+}
+
+body a {
+  text-decoration: none; 
+}
+
+main {
+  max-width: 50em;
+  margin: 0 auto;
+}
+
+/* The big bar across the top of the page */
+em-navbar {
+  border-radius: 8px;
+  display: flex;
+  background: black;
+
+  a {
+    text-decoration: none;
+  }
+
+  /* The big eminor.net logo and sylized text */
+  em-home-link {
+    padding: 0.2em;
+    em-navbar-home-logo {
+      display: inline;
+
+      img.svg-logo {
+        display: inline-block;
+        filter: invert(100%);
+        padding-top: 0.5%;
+      }
+    }
+
+    em-navbar-home-text {
+      vertical-align: top;
+      display: inline;
+      color: white;
+      font-size: 3em;
+      font-family: "Agu Display", serif;
+      position: relative;
+      bottom: 5px;
+    }
+  }
+
+  /* The navigation tabs */
+  .navbar-link-container {
+    margin-left: auto;
+    margin-right: 5%;
+    align-self: end;
+
+    ul.em-navbar-link-list {
+      display: inline;
+    }
+
+    em-navbar-link {
+      display: inline-block;
+      border-radius: 8px 8px 0px 0px;
+      text-decoration: none;
+      line-height: 2em;
+      min-width: 5em;
+      text-align: center;
+    }
+
+    em-navbar-link.active {
+      background-color: #73AD21;
+    }
+
+    em-navbar-link a {
+      text-decoration: none;
+      color: white;
+    }
+
+    em-navbar-link a.active {
+      color: black;
+    }
+  }
+}
+
+hr.footnotes-sep {
+  border-color: #000;
+}
+
+/* Footer stuff */
+em-footer {
+  border-radius: 5px;
+  display: flex;
+  background: darkgrey;
+
+  em-copyright {
+    padding-left: 1%;
+    padding-top: 0.15%;
+  }
+
+  a {
+    display: flex;
+  }
+
+  .github-logo {
+    text-decoration: none;
+    padding-top: 0.3%;
+    padding-bottom: 0.3%;
+    margin-right: 3%;
+    margin-left: auto;
+  }
+}
