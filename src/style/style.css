@@ -89,12 +89,35 @@ em-navbar {
   }
 }
 
+/* Projects page stuff */
+eminor-project-list {
+  display: inline;
+  /* padding-bottom: 5em; */
+  /* margin-bottom: 10em; */
+}
+
+eminor-project-list-entry {
+  display: block;
+  background: #89ad56;
+  border-radius: 5px;
+  padding: 0.1em;
+
+  eminor-blurb-text {
+    /* display: inline-block; */
+    vertical-align: top;
+    background: #ffffff;
+  }
+}
+
 hr.footnotes-sep {
   border-color: #000;
 }
 
-/* Footer stuff */
+/*
+ * Footer stuff
+ */
 em-footer {
+  margin-top: 1em;
   border-radius: 5px;
   display: flex;
   background: darkgrey;
