@@ -26,32 +26,42 @@ em-navbar {
   border-radius: 8px;
   display: flex;
   background: black;
+  flex-wrap: wrap;
 
   a {
     text-decoration: none;
   }
 
   /* The big eminor.net logo and sylized text */
-  em-home-link {
-    padding: 0.2em;
+  em-home-link > a {
+    /* padding: 0.2em; */
+    display: flex;
+    align-items: center;
+    vertical-align: center;
+    padding-top: 0.5em;
+
     em-navbar-home-logo {
       display: inline;
 
       img.svg-logo {
         display: inline-block;
         filter: invert(100%);
-        padding-top: 0.5%;
+        /* padding-top: 0.5%; */
       }
     }
 
     em-navbar-home-text {
-      vertical-align: top;
+      /* vertical-align: top; */
+      vertical-align: center;
       display: inline;
       color: white;
       font-size: 3em;
+      @media (max-width: 550px) {
+        font-size: 2em;
+      }
       font-family: "Agu Display", serif;
       position: relative;
-      bottom: 5px;
+      /* bottom: 5px; */
     }
   }
 
@@ -91,21 +101,26 @@ em-navbar {
 
 /* Projects page stuff */
 eminor-project-list {
-  display: inline;
+  display: flex;
   /* padding-bottom: 5em; */
   /* margin-bottom: 10em; */
 }
 
 eminor-project-list-entry {
-  display: block;
-  background: #89ad56;
+  display: flex;
   border-radius: 5px;
-  padding: 0.1em;
+
+  .blurb-image {
+    /* padding-left: 1em; */
+    padding-right: 1em;
+  }
 
   eminor-blurb-text {
     /* display: inline-block; */
+    /* display: flex; */
+    /* display: inline; */
     vertical-align: top;
-    background: #ffffff;
+    display: inline-block;
   }
 }
 
