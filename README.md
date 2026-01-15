@@ -18,18 +18,18 @@ npm install
 
 ```sh
 # Run locally on :8080
-npm run serve
+npm run start
 
 # Just build _site/ artifacts
-npm build
+npm run build
 ```
 
 ## References
 
-*   Built using [Eleventy].
-*   Support for SCSS formatted stylesheets comes from [eleventy-sass].
-*   Hosting on GitHub Pages: See [hosting-eleventy-on-github-pages]
-*   [Configuring GitHub apex domains]
+* Built using [Eleventy].
+* Support for SCSS formatted stylesheets comes from [eleventy-sass].
+* Hosting on GitHub Pages: See [hosting-eleventy-on-github-pages]
+* [Configuring GitHub apex domains]
 
 [Eleventy]: https://www.11ty.dev/
 [eleventy-sass]: https://github.com/kentaroi/eleventy-sass
