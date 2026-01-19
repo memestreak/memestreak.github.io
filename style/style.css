@@ -95,6 +95,33 @@ em-navbar {
   }
 }
 
+/* Projects page stuff */
+eminor-project-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  /* padding-bottom: 5em; */
+  /* margin-bottom: 10em; */
+}
+
+eminor-project-list-entry {
+  display: flex;
+  border-radius: 5px;
+
+  .blurb-image {
+    /* padding-left: 1em; */
+    padding-right: 1em;
+  }
+
+  eminor-blurb-text {
+    /* display: inline-block; */
+    /* display: flex; */
+    /* display: inline; */
+    vertical-align: top;
+    display: inline-block;
+  }
+}
+
 hr.footnotes-sep {
   border-color: #000;
 }
