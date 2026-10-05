@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang='en'>
 <head>
-<title>{{ title }}</title>
+<title>{% if title and title != site.title %}{{ title }} · {% endif %}{{ site.title }}</title>
 {% include "head.njk" %}
 </head>
 <body>

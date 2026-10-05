@@ -126,6 +126,14 @@ hr.footnotes-sep {
   border-color: #000;
 }
 
+/* Links in page content: dark enough to read on the green background
+   (WCAG AA contrast), and underlined so they don't rely on color alone. */
+main a {
+  color: #00205b;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
 /* Footer stuff */
 em-footer {
   border-radius: 5px;

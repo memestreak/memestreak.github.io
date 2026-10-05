@@ -1,5 +1,16 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+{%- set meta_description = description or (blurb and blurb.summary) or site.description %}
+{%- set meta_image = (blurb and blurb.image) or "/assets/img/eminor-logo-400x400.png" %}
+<meta name="description" content="{{ meta_description }}">
+<link rel="canonical" href="{{ site.url }}{{ page.url }}">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="{{ site.title }}">
+<meta property="og:title" content="{{ title or site.title }}">
+<meta property="og:description" content="{{ meta_description }}">
+<meta property="og:url" content="{{ site.url }}{{ page.url }}">
+<meta property="og:image" content="{{ site.url }}{{ meta_image }}">
+<meta name="twitter:card" content="summary">
 <link rel="stylesheet" href="{{ '/style/style.css' }}">
 <script src="/assets/js/jquery-3.7.1.js"></script>
 <script src="/assets/js/nav_link_highlight.js"></script>
