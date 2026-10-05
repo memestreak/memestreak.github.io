@@ -10,11 +10,11 @@ layout: base.njk
 
 This site is built using [Eleventy], a static site generator. The idea
 is that, for non-trivial sites, things like templating and other types
-of file preprocessing become worth the cost of framework's complexity.
+of file preprocessing become worth the cost of a framework's complexity.
 
 ## GitHub Pages
 
-We use [GitHub Pages] to host the site ([source]). It's currently free
+I use [GitHub Pages] to host the site ([source]). It's currently free
 for public repositories.
 
 GitHub Pages assumes the use of Jekyll[^jekyll], and configuring it to use

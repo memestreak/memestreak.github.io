@@ -25,7 +25,7 @@ module.exports = async function(eleventyConfig) {
     // Markdown to HTML configuration.
     const markdownItOptions = {
         html: true,
-        breaks: true,
+        breaks: false,
         linkify: true
     }
     const markdownLib = markdownIt(markdownItOptions)

@@ -5,15 +5,13 @@ layout: base.njk
 
 # Hello
 
-Right now, this is my playground for site development experimentation.
-The content on this page is written in markdown and transpiled by
-[Eleventy] into HTML.
+I'm Jeremy Ellington. I do software, hardware, music, and other
+buildy-makey things.
 
-Even code formatting is supported.
+## Recent projects
 
-```sh
-# Wow a shell comment.
-echo "Neat"
-```
+{% for post in collections['projects'] | reverse %}
+* [{{ post.data.title }}]({{ post.url }}): {{ post.data.blurb.summary }}
+{%- endfor %}
 
-[Eleventy]: https://www.11ty.dev/
+See all [projects](/projects), or read [about this site](/colophon).
