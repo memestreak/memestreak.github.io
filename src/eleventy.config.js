@@ -10,9 +10,13 @@ const syntaxHighlight = require("@11ty/eleventy-plugin-syntaxhighlight");
 // ----------------------------------------------------------------------------
 module.exports = async function(eleventyConfig) {
     eleventyConfig.addPassthroughCopy("src/style");
-    eleventyConfig.addPassthroughCopy("src/assets/js");
     eleventyConfig.addPassthroughCopy("src/assets/img");
     eleventyConfig.addPassthroughCopy("src/CNAME");
+    // Self-host the Prism theme from the same prismjs version the syntax
+    // highlighting plugin uses, rather than an old copy from a CDN.
+    eleventyConfig.addPassthroughCopy({
+        "node_modules/prismjs/themes/prism-okaidia.min.css": "style/prism-okaidia.css"
+    });
 
     eleventyConfig.addPlugin(syntaxHighlight);
 
