@@ -200,7 +200,7 @@ em-footer {
   }
 }
 
-/* Printing (e.g. saving the resume as a PDF): just the page content. */
+/* Printing: just the page content. */
 @media print {
   em-navbar, em-footer {
     display: none;
