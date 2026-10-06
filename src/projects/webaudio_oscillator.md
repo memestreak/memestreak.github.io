@@ -7,11 +7,13 @@ tags: projects
 blurb:
   summary: "A Web Audio oscillator in Angular"
   image: /assets/img/web_audio_osc.png
+  image_width: 1128
+  image_height: 576
 ---
 
 # Web Audio Oscillator
 
-![Oscillator screenshot](/assets/img/web_audio_osc.png){width=500}
+![Oscillator screenshot](/assets/img/web_audio_osc.png){width=500 height=255}
 
 This is a simple oscillator based on the [Web Audio API]. The
 interesting part here is mapping the linear range of the slider to the

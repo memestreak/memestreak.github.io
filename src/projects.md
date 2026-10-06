@@ -11,7 +11,8 @@ layout: base.njk
 
 {% for post in collections['projects'] %}
 <eminor-project-list-entry>
-<img class="blurb-image" width=200 alt="oscillator app screenshot" src="{{post.data.blurb.image}}" />
+<img class="blurb-image" alt="{{ post.data.title }} screenshot" src="{{ post.data.blurb.image }}"
+     width="{{ post.data.blurb.image_width }}" height="{{ post.data.blurb.image_height }}" />
 <eminor-blurb-text><a href="{{ post.url }}">{{
 post.data.title }}</a> : {{ post.data.blurb.summary }} </eminor-blurb-text>
 </eminor-project-list-entry>
