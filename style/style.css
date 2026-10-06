@@ -19,6 +19,11 @@ body a {
 main {
   max-width: 50em;
   margin: 0 auto;
+
+  img {
+    max-width: 100%;
+    height: auto;
+  }
 }
 
 /* The big bar across the top of the page */
@@ -111,6 +116,9 @@ eminor-project-list-entry {
   .blurb-image {
     /* padding-left: 1em; */
     padding-right: 1em;
+    width: 200px;
+    height: auto;
+    flex-shrink: 0;
   }
 
   eminor-blurb-text {
