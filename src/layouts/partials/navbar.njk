@@ -4,7 +4,7 @@
       <em-navbar-home-logo>
         <img src="/assets/img/eminor-logo.svg"
              alt="" class="svg-logo"
-             width="70" height="70" />
+             width="44" height="44" />
       </em-navbar-home-logo>
       <em-navbar-home-text>
         eminor.net
@@ -12,21 +12,13 @@
     </a>
   </em-home-link>
 
-  <!-- TODO: make this a dropdown. See: -->
-  <!-- https://www.w3schools.com/howto/howto_css_dropdown.asp -->
   <nav class="navbar-link-container">
-  {%- for link in navigation.main -%}
-     {% set active_nav_bar_link = "" -%}
-     {% if navigation_id == link.id  -%}
-       {% set active_nav_bar_link = "active" %}
-     {% endif %}
-     <em-navbar-link class="{{active_nav_bar_link}}">
-       <a href="{{ link.url }}"{% if link.description %}
-          title="{{ link.description }}" {% endif %}
-          class="{{active_nav_bar_link}}"
-          {%- if active_nav_bar_link %} aria-current="page"{% endif %}>{{ link.title }}
-       </a>
-     </em-navbar-link>
-  {%- endfor -%}
+    <ul class="em-navbar-link-list">
+    {%- for link in navigation.main %}
+      <li><a href="{{ link.url }}"
+             {%- if link.description %} title="{{ link.description }}"{% endif %}
+             {%- if navigation_id == link.id %} aria-current="page"{% endif %}>{{ link.title }}</a></li>
+    {%- endfor %}
+    </ul>
   </nav>
 </em-navbar>

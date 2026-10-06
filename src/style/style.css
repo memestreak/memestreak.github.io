@@ -1,21 +1,39 @@
+/* Palette: off-white "paper" with near-black text, and the site's green
+   kept as an accent. Contrast ratios are against --page (WCAG AA needs
+   4.5:1 for body text). */
 :root {
-  background: #73AD21;
+  --page: #f7f8f3;        /* page background */
+  --text: #1d2318;        /* body text, 15.1:1 */
+  --muted: #5a6352;       /* captions, dates, 5.9:1 */
+  --link: #2e6b0e;        /* links, 6.1:1 */
+  --rule: #d9ddd2;        /* borders and dividers */
+  --bar: #1d2318;         /* navbar background */
+  --bar-text: #f7f8f3;    /* navbar text */
+  --footer: #eceee6;      /* footer background */
+  --green: #73AD21;       /* signature green, for accents only */
 }
 
 /* For debugging: */
 /* * { outline: 1px dashed red ;} */
 
 body {
+  margin: 0;
+  background: var(--page);
+  color: var(--text);
   font-family: "Open Sans", sans-serif;
-}
-
-body a {
-  text-decoration: none;
+  line-height: 1.6;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
 }
 
 main {
-  max-width: 50em;
+  flex: 1;
+  box-sizing: border-box;
+  width: 100%;
+  max-width: 46em;
   margin: 0 auto;
+  padding: 1em 1em 3em;
 
   img {
     max-width: 100%;
@@ -23,77 +41,102 @@ main {
   }
 }
 
-/* The big bar across the top of the page */
+h1, h2, h3 {
+  line-height: 1.25;
+}
+
+/* Links in page content: underlined so they don't rely on color alone. */
+main a {
+  color: var(--link);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+main a:hover {
+  text-decoration-thickness: 2px;
+}
+
+a:focus-visible {
+  outline: 2px solid var(--green);
+  outline-offset: 2px;
+}
+
+hr.footnotes-sep {
+  border: 0;
+  border-top: 1px solid var(--rule);
+}
+
+/* The bar across the top of the page */
 em-navbar {
-  border-radius: 8px;
   display: flex;
-  background: black;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.25em 1.5em;
+  padding: 0.5em 1.25em;
+  background: var(--bar);
+  color: var(--bar-text);
 
   a {
+    color: inherit;
     text-decoration: none;
   }
 
-  /* The big eminor.net logo and sylized text */
+  /* The eminor.net logo and stylized text */
+  em-home-link a {
+    display: flex;
+    align-items: center;
+    gap: 0.5em;
+  }
 
-  em-home-link {
-    padding: 0.2em;
-    em-navbar-home-logo {
-      display: inline;
+  img.svg-logo {
+    display: block;
+    filter: invert(100%);
+  }
 
-      img.svg-logo {
-        display: inline-block;
-        filter: invert(100%);
-        padding-top: 0.5%;
-      }
-    }
-
-    em-navbar-home-text {
-      vertical-align: top;
-      display: inline;
-      color: white;
-      font-size: 3em;
-      @media (max-width: 550px) {
-        font-size: 2em;
-      }
-
-      font-family: "Agu Display",
-      serif;
-      position: relative;
-      bottom: 5px;
+  em-navbar-home-text {
+    font-family: "Agu Display", serif;
+    font-size: 2em;
+    line-height: 1;
+    @media (max-width: 550px) {
+      font-size: 1.6em;
     }
   }
 
-  /* The navigation tabs */
+  /* The navigation links. The current page gets a green underline. */
   .navbar-link-container {
     margin-left: auto;
-    margin-right: 5%;
-    align-self: end;
+  }
 
-    ul.em-navbar-link-list {
-      display: inline;
-    }
+  ul.em-navbar-link-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.25em 1.25em;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
 
-    em-navbar-link {
-      display: inline-block;
-      border-radius: 8px 8px 0px 0px;
-      text-decoration: none;
-      line-height: 2em;
-      min-width: 5em;
-      text-align: center;
-    }
+  ul.em-navbar-link-list a {
+    display: block;
+    padding: 0.3em 0;
+    border-bottom: 3px solid transparent;
+  }
 
-    em-navbar-link.active {
-      background-color: #73AD21;
-    }
+  ul.em-navbar-link-list a:hover {
+    border-bottom-color: var(--muted);
+  }
 
-    em-navbar-link a {
-      text-decoration: none;
-      color: white;
-    }
+  ul.em-navbar-link-list a[aria-current="page"] {
+    font-weight: 600;
+    border-bottom-color: var(--green);
+  }
+}
 
-    em-navbar-link a.active {
-      color: black;
-    }
+/* On narrow screens, put the links on their own row under the logo. */
+@media (max-width: 550px) {
+  em-navbar .navbar-link-container {
+    margin-left: 0;
+    width: 100%;
   }
 }
 
@@ -102,63 +145,78 @@ eminor-project-list {
   display: flex;
   flex-direction: column;
   gap: 1rem;
-  /* padding-bottom: 5em; */
-  /* margin-bottom: 10em; */
 }
 
 eminor-project-list-entry {
   display: flex;
-  border-radius: 5px;
+  gap: 1em;
 
   .blurb-image {
-    /* padding-left: 1em; */
-    padding-right: 1em;
     width: 200px;
     height: auto;
     flex-shrink: 0;
+    border: 1px solid var(--rule);
   }
 
-  eminor-blurb-text {
-    /* display: inline-block; */
-    /* display: flex; */
-    /* display: inline; */
-    vertical-align: top;
-    display: inline-block;
+  @media (max-width: 550px) {
+    flex-direction: column;
   }
 }
 
-hr.footnotes-sep {
-  border-color: #000;
+/* Notes list: one entry per line, with its date */
+ul.note-list {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75em;
+
+  time {
+    display: block;
+    color: var(--muted);
+    font-size: 0.875em;
+  }
 }
 
-/* Links in page content: dark enough to read on the green background
-   (WCAG AA contrast), and underlined so they don't rely on color alone. */
-main a {
-  color: #00205b;
-  text-decoration: underline;
-  text-underline-offset: 2px;
+.note-date {
+  color: var(--muted);
+  font-size: 0.875em;
+  margin-top: -0.75em;
 }
 
 /* Footer stuff */
 em-footer {
-  border-radius: 5px;
   display: flex;
-  background: darkgrey;
-
-  em-copyright {
-    padding-left: 1%;
-    padding-top: 0.15%;
-  }
-
-  a {
-    display: flex;
-  }
+  align-items: center;
+  padding: 0.5em 1.25em;
+  background: var(--footer);
+  color: var(--muted);
+  border-top: 1px solid var(--rule);
+  font-size: 0.875em;
 
   .github-logo {
-    text-decoration: none;
-    padding-top: 0.3%;
-    padding-bottom: 0.3%;
-    margin-right: 3%;
+    display: flex;
     margin-left: auto;
+  }
+}
+
+/* Printing (e.g. saving the resume as a PDF): just the page content. */
+@media print {
+  em-navbar, em-footer {
+    display: none;
+  }
+
+  body {
+    background: none;
+    color: #000;
+  }
+
+  main {
+    max-width: none;
+    padding: 0;
+  }
+
+  main a {
+    color: inherit;
   }
 }

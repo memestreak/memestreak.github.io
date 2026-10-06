@@ -1,14 +1,25 @@
 {
   "main": [
     {
-      "id": "about",
-      "title": "About",
-      "url": "/about"
-    },
-    {
       "id": "projects",
       "title": "Projects",
       "url": "/projects"
+    },
+    {
+      "id": "notes",
+      "title": "Notes",
+      "url": "/notes",
+      "description": "Things I've learned"
+    },
+    {
+      "id": "resume",
+      "title": "Resume",
+      "url": "/resume"
+    },
+    {
+      "id": "about",
+      "title": "About",
+      "url": "/about"
     }
   ]
 }
