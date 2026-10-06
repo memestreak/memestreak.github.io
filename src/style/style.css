@@ -1,16 +1,19 @@
-/* Palette: off-white "paper" with near-black text, and the site's green
-   kept as an accent. Contrast ratios are against --page (WCAG AA needs
-   4.5:1 for body text). */
+/* Palette: "Rosewood", a warm dark brown like a guitar fretboard, with
+   cream text, brass links, and the site's green kept as an accent.
+   Contrast ratios are against --page (WCAG AA needs 4.5:1 for body
+   text). */
 :root {
-  --page: #f7f8f3;        /* page background */
-  --text: #1d2318;        /* body text, 15.1:1 */
-  --muted: #5a6352;       /* captions, dates, 5.9:1 */
-  --link: #2e6b0e;        /* links, 6.1:1 */
-  --rule: #d9ddd2;        /* borders and dividers */
-  --bar: #1d2318;         /* navbar background */
-  --bar-text: #f7f8f3;    /* navbar text */
-  --footer: #eceee6;      /* footer background */
-  --green: #73AD21;       /* signature green, for accents only */
+  --page: #2b1e18;        /* page background, a rosewood brown */
+  --text: #efe4d2;        /* body text, 12.8:1 */
+  --muted: #b9a690;       /* captions, dates, 6.9:1 */
+  --link: #e8b25a;        /* links, brass, 8.4:1 */
+  --rule: #4a372c;        /* borders and dividers */
+  --card: #352620;        /* project card background */
+  --bar: #21160f;         /* navbar background */
+  --bar-text: #efe4d2;    /* navbar text */
+  --string: #6d5442;      /* the "guitar string" lines under the navbar */
+  --footer: #21160f;      /* footer background */
+  --green: #8fc24a;       /* signature green, for accents only */
 }
 
 /* For debugging: */
@@ -43,6 +46,14 @@ main {
 
 h1, h2, h3 {
   line-height: 1.25;
+}
+
+/* Page titles use the logo's display face. */
+h1 {
+  font-family: "Agu Display", serif;
+  font-weight: normal;
+  font-size: 2.5em;
+  line-height: 1.1;
 }
 
 /* Links in page content: underlined so they don't rely on color alone. */
@@ -132,6 +143,14 @@ em-navbar {
   }
 }
 
+/* Six thin lines under the navbar, like guitar strings, to echo the
+   chord-diagram logo. */
+.navbar-strings {
+  height: 13px;
+  background: var(--bar) repeating-linear-gradient(
+    to bottom, var(--string) 0 1px, transparent 1px 2.5px);
+}
+
 /* On narrow screens, put the links on their own row under the logo. */
 @media (max-width: 550px) {
   em-navbar .navbar-link-container {
@@ -140,27 +159,45 @@ em-navbar {
   }
 }
 
-/* Projects page stuff */
-eminor-project-list {
-  display: flex;
-  flex-direction: column;
+/* Project cards, on the home and Projects pages */
+.project-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(14rem, 1fr));
   gap: 1rem;
 }
 
-eminor-project-list-entry {
+main a.project-card {
   display: flex;
-  gap: 1em;
+  flex-direction: column;
+  gap: 0.25em;
+  padding: 0.75em;
+  background: var(--card);
+  border: 1px solid var(--rule);
+  border-radius: 6px;
+  color: var(--text);
+  text-decoration: none;
 
-  .blurb-image {
-    width: 200px;
-    height: auto;
-    flex-shrink: 0;
-    border: 1px solid var(--rule);
+  &:hover {
+    border-color: var(--green);
   }
 
-  @media (max-width: 550px) {
-    flex-direction: column;
+  img {
+    width: 100%;
+    aspect-ratio: 3 / 1;
+    object-fit: cover;
+    border-radius: 3px;
+    margin-bottom: 0.25em;
   }
+}
+
+.project-card-title {
+  color: var(--link);
+  font-weight: 600;
+}
+
+.project-card-summary {
+  color: var(--muted);
+  font-size: 0.875em;
 }
 
 /* Notes list: one entry per line, with its date */
@@ -197,6 +234,11 @@ em-footer {
   .github-logo {
     display: flex;
     margin-left: auto;
+  }
+
+  /* The GitHub mark is black; make it light on the dark footer. */
+  .svg-logo {
+    filter: invert(90%);
   }
 }
 

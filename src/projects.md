@@ -7,17 +7,5 @@ layout: base.njk
 
 # Projects
 
-<!-- markdownlint-disable MD033 -->
-<eminor-project-list>
-
-{% for post in collections['projects'] %}
-<eminor-project-list-entry>
-<img class="blurb-image" alt="{{ post.data.title }} screenshot" src="{{ post.data.blurb.image }}"
-     width="{{ post.data.blurb.image_width }}" height="{{ post.data.blurb.image_height }}" />
-<eminor-blurb-text><a href="{{ post.url }}">{{
-post.data.title }}</a> : {{ post.data.blurb.summary }} </eminor-blurb-text>
-</eminor-project-list-entry>
-{% endfor %}
-
-</eminor-project-list>
-<!-- markdownlint-enable MD033 -->
+{% set project_list = collections['projects'] %}
+{% include "project-cards.njk" %}
