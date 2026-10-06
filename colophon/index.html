@@ -28,7 +28,7 @@
       <em-navbar-home-logo>
         <img src="/assets/img/eminor-logo.svg"
              alt="" class="svg-logo"
-             width="70" height="70" />
+             width="44" height="44" />
       </em-navbar-home-logo>
       <em-navbar-home-text>
         eminor.net
@@ -36,20 +36,13 @@
     </a>
   </em-home-link>
 
-  <!-- TODO: make this a dropdown. See: -->
-  <!-- https://www.w3schools.com/howto/howto_css_dropdown.asp -->
   <nav class="navbar-link-container">
-     
-     <em-navbar-link class="active">
-       <a href="/about"
-          class="active" aria-current="page">About
-       </a>
-     </em-navbar-link>
-     <em-navbar-link class="">
-       <a href="/projects"
-          class="">Projects
-       </a>
-     </em-navbar-link></nav>
+    <ul class="em-navbar-link-list">
+      <li><a href="/projects">Projects</a></li>
+      <li><a href="/notes" title="Things I&#39;ve learned">Notes</a></li>
+      <li><a href="/about" aria-current="page">About</a></li>
+    </ul>
+  </nav>
 </em-navbar>
 
 <main>
