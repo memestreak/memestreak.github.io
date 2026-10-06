@@ -1,0 +1,7 @@
+---
+layout: base.njk
+---
+<h1>{{ title }}</h1>
+<p class="note-date"><time datetime="{{ page.date.toISOString().slice(0, 10) }}">{{ page.date.toISOString().slice(0, 10) }}</time></p>
+{{ content | safe }}
+<p><a href="/notes">All notes</a></p>
