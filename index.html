@@ -43,16 +43,27 @@
     </ul>
   </nav>
 </em-navbar>
+<div class="navbar-strings" aria-hidden="true"></div>
 
 <main>
 <h1>Hello</h1>
 <p>I'm Jeremy Ellington. I do software, hardware, music, and other
 buildy-makey things.</p>
 <h2>Recent projects</h2>
-<ul>
-<li><a href="/projects/xox_drum_machine/">XOX Drum Machine</a>: A Roland XOX-style drum machine via React and Web Audio</li>
-<li><a href="/projects/webaudio_oscillator/">Web Audio Oscillator</a>: A Web Audio oscillator in Angular</li>
-</ul>
+<div class="project-cards">
+<a class="project-card" href="/projects/xox_drum_machine/">
+<img src="/assets/img/xox-screenshot.png" alt="" loading="lazy"
+     width="562" height="152">
+<span class="project-card-title">XOX Drum Machine</span>
+<span class="project-card-summary">A Roland XOX-style drum machine via React and Web Audio</span>
+</a>
+<a class="project-card" href="/projects/webaudio_oscillator/">
+<img src="/assets/img/web_audio_osc.png" alt="" loading="lazy"
+     width="1128" height="576">
+<span class="project-card-title">Web Audio Oscillator</span>
+<span class="project-card-summary">A Web Audio oscillator in Angular</span>
+</a>
+</div>
 <p>See all <a href="/projects">projects</a>, or read <a href="/colophon">about this site</a>.</p>
 
 </main>
