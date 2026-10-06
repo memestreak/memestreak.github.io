@@ -6,12 +6,6 @@
       "url": "/projects"
     },
     {
-      "id": "notes",
-      "title": "Notes",
-      "url": "/notes",
-      "description": "Things I've learned"
-    },
-    {
       "id": "about",
       "title": "About",
       "url": "/about"
