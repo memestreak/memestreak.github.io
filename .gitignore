@@ -10,4 +10,4 @@ _site
 
 # Secrets and errors
 .env
-.log
+*.log
