@@ -1,6 +1,7 @@
 ---
 title: About
 navigation_id: about
+description: About Jeremy Ellington and eminor.net.
 layout: base.njk
 ---
 

@@ -1,6 +1,7 @@
 ---
 title: Colophon
 navigation_id: about
+description: How eminor.net is built and hosted.
 layout: base.njk
 ---
 

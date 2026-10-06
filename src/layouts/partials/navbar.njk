@@ -3,7 +3,7 @@
     <a href="/">
       <em-navbar-home-logo>
         <img src="/assets/img/eminor-logo.svg"
-             alt="Eminor.net logo" class="svg-logo"
+             alt="" class="svg-logo"
              width="70" height="70" />
       </em-navbar-home-logo>
       <em-navbar-home-text>
@@ -23,7 +23,8 @@
      <em-navbar-link class="{{active_nav_bar_link}}">
        <a href="{{ link.url }}"{% if link.description %}
           title="{{ link.description }}" {% endif %}
-          class="{{active_nav_bar_link}}">{{ link.title }}
+          class="{{active_nav_bar_link}}"
+          {%- if active_nav_bar_link %} aria-current="page"{% endif %}>{{ link.title }}
        </a>
      </em-navbar-link>
   {%- endfor -%}
