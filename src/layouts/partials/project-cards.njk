@@ -1,0 +1,12 @@
+{#- Cards for a list of project pages. Set `project_list` before including.
+    Kept free of blank lines so Markdown passes it through as one HTML block. -#}
+<div class="project-cards">
+{%- for post in project_list %}
+<a class="project-card" href="{{ post.url }}">
+<img src="{{ post.data.blurb.image }}" alt="" loading="lazy"
+     width="{{ post.data.blurb.image_width }}" height="{{ post.data.blurb.image_height }}">
+<span class="project-card-title">{{ post.data.title }}</span>
+<span class="project-card-summary">{{ post.data.blurb.summary }}</span>
+</a>
+{%- endfor %}
+</div>

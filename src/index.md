@@ -10,8 +10,7 @@ buildy-makey things.
 
 ## Recent projects
 
-{% for post in collections['projects'] | reverse %}
-* [{{ post.data.title }}]({{ post.url }}): {{ post.data.blurb.summary }}
-{%- endfor %}
+{% set project_list = collections['projects'] | reverse %}
+{% include "project-cards.njk" %}
 
 See all [projects](/projects), or read [about this site](/colophon).
