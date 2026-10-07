@@ -26,5 +26,5 @@ theory handled by [Tonal].
 
 [Next.js]: https://nextjs.org
 [Tonal]: https://github.com/tonaljs/tonal
-[Demo]: https://fret.eminor.net
+[Demo]: https://frets.eminor.net
 [Source code]: https://github.com/memestreak/frets
