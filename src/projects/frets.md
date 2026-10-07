@@ -15,13 +15,8 @@ blurb:
 
 ![Frets scale lab showing A Dorian on the neck, labeled by scale degree](/assets/img/frets-scale-lab.png){width=500 height=167}
 
-Frets is a set of tools for learning the guitar fretboard. The scale
-lab draws any root and scale across the first 15 frets, with each dot
-labeled by scale degree or note name, and stacks the scale's triads or
-seventh chords so you can see each one's tones against the scale.
-There's also a chord library of open and moveable shapes, a chord lab
-that names whatever you tap out on the neck, and interval and note
-trainers that quiz you until you know the neck cold.
+Frets is a set of guitar-centric music-theory tools. It includes interactive
+reference and quiz features.
 
 It's a static [Next.js] app written in TypeScript, with the music
 theory handled by [Tonal].
