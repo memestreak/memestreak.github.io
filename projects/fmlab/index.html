@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<title>fmlab · eminor.net</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="An interactive guide to FM synthesis with Web Audio">
+<link rel="canonical" href="https://eminor.net/projects/fmlab/">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="eminor.net">
+<meta property="og:title" content="fmlab">
+<meta property="og:description" content="An interactive guide to FM synthesis with Web Audio">
+<meta property="og:url" content="https://eminor.net/projects/fmlab/">
+<meta property="og:image" content="https://eminor.net/assets/img/fmlab-bessel.png">
+<meta name="twitter:card" content="summary">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Agu+Display&family=Open+Sans&display=swap">
+<link rel="stylesheet" href="/style/style.css">
+<link rel="stylesheet" href="/style/prism-okaidia.css">
+<link rel="icon" type="image/svg+xml" href="/assets/img/eminor-logo-white-bg.svg">
+
+</head>
+<body>
+<em-navbar>
+  <em-home-link>
+    <a href="/">
+      <em-navbar-home-logo>
+        <img src="/assets/img/eminor-logo.svg"
+             alt="" class="svg-logo"
+             width="44" height="44" />
+      </em-navbar-home-logo>
+      <em-navbar-home-text>
+        eminor.net
+      </em-navbar-home-text>
+    </a>
+  </em-home-link>
+
+  <nav class="navbar-link-container">
+    <ul class="em-navbar-link-list">
+      <li><a href="/projects" aria-current="page">Projects</a></li>
+      <li><a href="/about">About</a></li>
+    </ul>
+  </nav>
+</em-navbar>
+<div class="navbar-strings" aria-hidden="true"></div>
+
+<main>
+<h1>fmlab</h1>
+<p><img src="/assets/img/fmlab-bessel.png" alt="fmlab's Bessel function plot, showing how tall each pair of sidebands is at every modulation index" width="500" height="167"></p>
+<p>fmlab is an interactive guide to FM synthesis. Short chapters go from a
+single sine wave up to the Yamaha DX7's operator algorithms, each with
+controls you can play with while you hear the sound and watch its
+waveform and spectrum change. A sandbox at the end has every control
+and an on-screen keyboard.</p>
+<p>It's written in vanilla TypeScript with <a href="https://vite.dev">Vite</a>, drawing with Canvas 2D,
+and the sound comes from a phase-modulation engine in a Web Audio
+<a href="https://developer.mozilla.org/en-US/docs/Web/API/AudioWorklet">AudioWorklet</a>.</p>
+<ul>
+<li><a href="https://fmlab.pages.dev" target="_blank">Demo</a></li>
+<li><a href="https://github.com/memestreak/fmlab">Source code</a></li>
+</ul>
+
+</main>
+<em-footer>
+  <em-copyright>© 2026 Jeremy Ellington</em-copyright>
+  <a class="github-logo" href="https://github.com/memestreak">
+    <img src="/assets/img/github-mark.svg" alt="GitHub profile"
+         class="svg-logo" width="20" height="20" />
+  </a>
+</em-footer>
+</body>
+</html>
